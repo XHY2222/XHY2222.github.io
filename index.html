@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>肖慧宇 · Xiao Huiyu</title>
+  <meta name="description" content="肖慧宇 (Xiao Huiyu) 的个人主页" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="#" class="nav-logo">XHY</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" aria-label="切换深色模式">🌙</button>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Hi, I'm</p>
+      <h1 class="hero-name">
+        <span class="cn">肖慧宇</span>
+        <span class="en">Xiao Huiyu</span>
+      </h1>
+      <p class="hero-tagline">一句话介绍你自己 · A short tagline goes here.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">看看作品</a>
+        <a href="#contact" class="btn btn-ghost">联系我</a>
+      </div>
+    </div>
+    <div class="hero-scroll">↓</div>
+  </header>
+
+  <section id="about" class="section">
+    <div class="section-inner">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>这里写一段关于你自己的介绍 —— 你是谁、在做什么、对什么感兴趣。</p>
+          <p>可以再写一段，比如你的研究方向、技术栈、目前关注的话题，或者你最近正在折腾的事情。</p>
+        </div>
+        <ul class="about-meta">
+          <li><span class="meta-key">Location</span><span class="meta-val">—</span></li>
+          <li><span class="meta-key">Focus</span><span class="meta-val">—</span></li>
+          <li><span class="meta-key">Stack</span><span class="meta-val">—</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section-alt">
+    <div class="section-inner">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-cover" style="background: linear-gradient(135deg, #a8c0ff, #3f2b96);"></div>
+          <div class="project-body">
+            <h3>项目一 / Project One</h3>
+            <p>一句话描述这个项目做什么、解决了什么问题。</p>
+            <div class="project-meta">
+              <span class="tag">Tag</span>
+              <a href="#" class="project-link">查看 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-cover" style="background: linear-gradient(135deg, #ff9a9e, #fad0c4);"></div>
+          <div class="project-body">
+            <h3>项目二 / Project Two</h3>
+            <p>这里替换成你的另一个项目的简介。</p>
+            <div class="project-meta">
+              <span class="tag">Tag</span>
+              <a href="#" class="project-link">查看 →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-cover" style="background: linear-gradient(135deg, #84fab0, #8fd3f4);"></div>
+          <div class="project-body">
+            <h3>项目三 / Project Three</h3>
+            <p>第三个项目占位卡片，删除或替换都行。</p>
+            <div class="project-meta">
+              <span class="tag">Tag</span>
+              <a href="#" class="project-link">查看 →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="section-inner contact-inner">
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-lead">想聊聊？随时通过下面任一方式找我。</p>
+      <ul class="contact-list">
+        <li>
+          <a href="https://github.com/XHY2222" target="_blank" rel="noopener">
+            <span class="contact-icon">⟁</span>
+            <span class="contact-text">
+              <span class="contact-key">GitHub</span>
+              <span class="contact-val">@XHY2222</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:your-email@example.com">
+            <span class="contact-icon">✉</span>
+            <span class="contact-text">
+              <span class="contact-key">Email</span>
+              <span class="contact-val">your-email@example.com</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener">
+            <span class="contact-icon">⌬</span>
+            <span class="contact-text">
+              <span class="contact-key">其他</span>
+              <span class="contact-val">替换成你的链接</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> 肖慧宇 · Built with HTML & ☕</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

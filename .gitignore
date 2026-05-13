@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local env
+.env
+.env.local
+
+# Local agent notes (本机绝对路径，不上传)
+AGENTS.md
+.claude/
