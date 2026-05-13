@@ -48,11 +48,9 @@ a { color: inherit; text-decoration: none; }
   transition: color .2s var(--ease);
 }
 .nav-links a:hover { color: var(--fg); }
-
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.nav-links a.active {
+  color: var(--accent);
+  font-weight: 500;
 }
 
 .theme-toggle {
@@ -373,55 +371,170 @@ a { color: inherit; text-decoration: none; }
 }
 .project-link:hover { opacity: .7; }
 
-/* ===== CONTACT ===== */
-.contact-lead {
-  font-size: 18px;
-  color: var(--fg-muted);
-  margin-bottom: 40px;
-  max-width: 540px;
-}
-.contact-list {
-  list-style: none;
-  display: grid;
-  gap: 14px;
-}
-.contact-list a {
+/* ===== PUBLICATIONS ===== */
+.pub-list {
   display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 22px 26px;
+  flex-direction: column;
+  gap: 32px;
+}
+.pub-item {
+  background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: all .25s var(--ease);
+  padding: 28px 32px;
 }
-.contact-list a:hover {
-  background: var(--accent-soft);
-  transform: translateX(6px);
+.pub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.contact-icon {
-  font-size: 22px;
-  width: 36px;
-  text-align: center;
+.pub-title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
 }
-.contact-text { display: flex; flex-direction: column; }
-.contact-key {
-  font-size: 12px;
-  letter-spacing: .14em;
-  text-transform: uppercase;
+.pub-venue {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 500;
+}
+.pub-authors {
+  font-size: 14px;
   color: var(--fg-muted);
+  margin-bottom: 12px;
 }
-.contact-val {
-  font-size: 16px;
-  margin-top: 2px;
+.pub-abstract {
+  font-size: 14px;
+  color: var(--fg);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pub-tags span {
+  font-size: 11px;
+  color: var(--fg-muted);
+  background: var(--accent-soft);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+/* ===== WORK EXPERIENCE ===== */
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.work-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+}
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.work-company {
+  font-size: 18px;
+  font-weight: 600;
+}
+.work-role {
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 500;
+}
+.work-time {
+  font-size: 14px;
+  color: var(--fg-muted);
+  font-variant-numeric: tabular-nums;
+}
+.work-details {
+  list-style: none;
+  padding-left: 0;
+}
+.work-details li {
+  font-size: 14px;
+  color: var(--fg);
+  line-height: 1.7;
+  padding: 4px 0;
+  position: relative;
+  padding-left: 16px;
+}
+.work-details li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
 }
 
 /* ===== FOOTER ===== */
 .footer {
-  padding: 40px 32px;
+  padding: 48px 32px 32px;
   text-align: center;
+  border-top: 1px solid var(--border);
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: var(--fg-muted);
+  transition: all .25s var(--ease);
+}
+.footer-social a:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+.footer p {
   color: var(--fg-muted);
   font-size: 13px;
-  border-top: 1px solid var(--border);
+}
+
+/* ===== PAGE HERO (subpages) ===== */
+.page-hero {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 32px 60px;
+  text-align: center;
+}
+.page-hero h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  letter-spacing: -.02em;
+  margin-bottom: 12px;
+}
+.page-hero p {
+  font-size: 16px;
+  color: var(--fg-muted);
 }
 
 /* ===== ANIMATIONS ===== */
