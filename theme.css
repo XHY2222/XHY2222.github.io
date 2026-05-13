@@ -1,0 +1,45 @@
+/* ===== BLUE THEME ===== */
+
+:root {
+  /* Primary blue scale */
+  --blue-50:  #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+
+  /* Semantic colors — Light mode */
+  --bg:        #ffffff;
+  --bg-alt:    #f5f7ff;
+  --fg:        #0f172a;
+  --fg-muted:  #64748b;
+  --border:    #e2e8f0;
+
+  --accent:        var(--blue-600);
+  --accent-hover:  var(--blue-700);
+  --accent-soft:   var(--blue-50);
+  --accent-glow:   rgba(59, 130, 246, 0.15);
+
+  /* Decorative */
+  --radius: 14px;
+  --max:    1080px;
+  --ease:   cubic-bezier(.4, 0, .2, 1);
+}
+
+[data-theme="dark"] {
+  --bg:        #0b1120;
+  --bg-alt:    #0f172a;
+  --fg:        #f1f5f9;
+  --fg-muted:  #94a3b8;
+  --border:    #1e293b;
+
+  --accent:        var(--blue-400);
+  --accent-hover:  var(--blue-300);
+  --accent-soft:   rgba(30, 58, 138, 0.25);
+  --accent-glow:   rgba(96, 165, 250, 0.12);
+}
