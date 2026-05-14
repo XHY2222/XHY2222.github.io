@@ -28,15 +28,13 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // 滚动时显示/隐藏导航栏阴影
 const nav = document.querySelector('.nav');
-let lastY = 0;
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
-  if (y > 20) nav.style.boxShadow = '0 4px 20px -10px rgba(0,0,0,.1)';
+  if (y > 20) nav.style.boxShadow = '0 4px 20px -10px rgba(0,0,0,.08)';
   else nav.style.boxShadow = 'none';
-  lastY = y;
 });
 
-// IntersectionObserver: 卡片进入视口时淡入
+// IntersectionObserver: 元素进入视口时淡入
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -45,11 +43,11 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 
-document.querySelectorAll('.project-card, .about-grid, .education-list, .awards-list, .pub-list, .work-list').forEach(el => {
+document.querySelectorAll('.edu-card, .pub-row, .work-row, .stat-card').forEach((el, i) => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity .6s cubic-bezier(.4,0,.2,1), transform .6s cubic-bezier(.4,0,.2,1)';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = `opacity .5s ${i * 0.05}s cubic-bezier(.4,0,.2,1), transform .5s ${i * 0.05}s cubic-bezier(.4,0,.2,1)`;
   observer.observe(el);
 });

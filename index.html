@@ -27,134 +27,199 @@
 
   <header class="hero">
     <div class="hero-inner">
-      <img src="Introduction.jpg" alt="Xiao Huiyu" class="hero-avatar" />
-      <div class="hero-content">
-        <p class="hero-eyebrow">Hi, I'm</p>
-        <h1 class="hero-name">
-          <span class="en">Xiao Huiyu</span>
-        </h1>
-        <p class="hero-tagline">M.S. in Information and Communication Engineering @ BUPT · Research: LLM Post-Training & Continual Learning</p>
+      <div class="hero-left">
+        <p class="hero-eyebrow">Hi, I'm <span class="hero-line"></span></p>
+        <h1 class="hero-name">Xiao Huiyu</h1>
+        <p class="hero-desc">M.S. student in Information and Communication Engineering at BUPT. My research focuses on LLM Post-Training, Continual Learning, RAG, multimodal large models, agent systems, and voice interaction.</p>
+        <div class="hero-tags">
+          <span>LLM Post-Training</span>
+          <span>Continual Learning</span>
+          <span>RAG</span>
+          <span>Agent Systems</span>
+        </div>
         <div class="hero-cta">
-          <a href="publications.html" class="btn btn-primary">Publications</a>
-          <a href="awards.html" class="btn btn-ghost">Awards</a>
+          <a href="publications.html" class="btn btn-primary">View Publications</a>
+          <a href="cv.pdf" class="btn btn-ghost" download>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+            Download CV
+          </a>
+          <a href="photography.html" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+            Explore Photography
+          </a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-photo-wrap">
+          <img src="Introduction.jpg" alt="Xiao Huiyu" />
+        </div>
+        <div class="hero-cards">
+          <div class="info-card">
+            <svg class="info-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <div class="info-text">
+              <span class="info-label">Location</span>
+              <span class="info-val">Beijing, China</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <svg class="info-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <div class="info-text">
+              <span class="info-label">Focus</span>
+              <span class="info-val">LLM · Continual Learning<br/>RAG · Agents</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <svg class="info-icon" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+            <div class="info-text">
+              <span class="info-label">Stack</span>
+              <span class="info-val">Python · PyTorch<br/>LlamaFactory</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="hero-scroll">↓</div>
   </header>
 
-  <section id="about" class="section">
+  <section id="about" class="section section-alt">
     <div class="section-inner">
-      <h2 class="section-title">About</h2>
+      <h2 class="section-title"><span class="dot"></span>About</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>Master's student at the School of Information and Communication Engineering, Beijing University of Posts and Telecommunications (BUPT). My research focuses on LLM Post-Training, Class-incremental Learning, and Retrieval-Augmented Generation (RAG). I am also passionate about multimodal large models, agent systems, and voice interaction.</p>
+          <p>I am a Master's student at the School of Information and Communication Engineering, Beijing University of Posts and Telecommunications (BUPT). My research centers on LLM Post-Training, class-incremental learning, retrieval-augmented generation (RAG), multimodal large models, agent systems, and voice interaction.</p>
           <p>I was directly admitted to BUPT for graduate studies. During my undergraduate years, I won multiple awards including First Prize in the National Mathematical Modeling Contest (Beijing Division) and Honorable Mention in the Mathematical Contest in Modeling (MCM). I also completed two national-level innovation projects, demonstrating solid engineering and research capabilities.</p>
         </div>
-        <ul class="about-meta">
-          <li><span class="meta-key">Location</span><span class="meta-val">Beijing, China</span></li>
-          <li><span class="meta-key">Focus</span><span class="meta-val">LLM · Continual Learning · Agent</span></li>
-          <li><span class="meta-key">Stack</span><span class="meta-val">Python · PyTorch · LlamaFactory</span></li>
-        </ul>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <svg class="stat-icon" viewBox="0 0 24 24"><path d="M19 5h-2V3H7v2H5c-1.1 0-2 .9-2 2v1c0 2.55 1.92 4.63 4.39 4.94.63 1.5 1.98 2.63 3.61 2.96V19H8v2h8v-2h-3v-3.1c1.63-.33 2.98-1.46 3.61-2.96C19.08 12.63 21 10.55 21 8V7c0-1.1-.9-2-2-2zM5 8V7h2v3.82C5.84 10.4 5 9.3 5 8zm14 0c0 1.3-.84 2.4-2 2.82V7h2v1z"/></svg>
+            <div class="stat-text">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Awards & Honors</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <svg class="stat-icon" viewBox="0 0 24 24"><path d="M12 2.5s-4.5 2.5-7 7c-2.5 4.5-1 10-1 10s4.5-2.5 7-7c2.5-4.5 1-10 1-10zM10 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5 5.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+            <div class="stat-text">
+              <span class="stat-num">2</span>
+              <span class="stat-label">National-level Innovation Projects</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <svg class="stat-icon" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+            <div class="stat-text">
+              <span class="stat-num">Direct</span>
+              <span class="stat-label">Graduate Admission to BUPT</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="education" class="section section-alt">
+  <section id="education" class="section">
     <div class="section-inner">
-      <h2 class="section-title">Education</h2>
-      <div class="education-list">
-        <div class="education-item">
-          <div class="education-header">
-            <div class="education-school">Beijing University of Posts and Telecommunications · M.S.</div>
-            <div class="education-time">Sep 2026 – Jun 2029</div>
+      <h2 class="section-title"><span class="dot"></span>Education</h2>
+      <div class="edu-list">
+        <div class="edu-card">
+          <div class="edu-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
           </div>
-          <div class="education-detail">
-            <p>School of Information and Communication Engineering, Information and Communication Engineering (Direct Admission)</p>
-            <p class="education-tags">
-              <span>Research: LLM Post-Train</span>
+          <div class="edu-body">
+            <div class="edu-header">
+              <span class="edu-school">Beijing University of Posts and Telecommunications · M.S.</span>
+              <span class="edu-time">Sep 2026 – Jun 2029</span>
+            </div>
+            <p class="edu-major">School of Information and Communication Engineering<br/>Information and Communication Engineering (Direct Admission)</p>
+            <div class="edu-tags">
+              <span>LLM Post-Train</span>
               <span>Openclaw</span>
               <span>Class-incremental Learning</span>
               <span>RAG</span>
-            </p>
+            </div>
           </div>
         </div>
-        <div class="education-item">
-          <div class="education-header">
-            <div class="education-school">Beijing University of Posts and Telecommunications · B.S.</div>
-            <div class="education-time">Sep 2022 – Jun 2026</div>
+        <div class="edu-card">
+          <div class="edu-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
           </div>
-          <div class="education-detail">
-            <p>School of Information and Communication Engineering, Electronic Information Engineering</p>
-            <p class="education-tags">
+          <div class="edu-body">
+            <div class="edu-header">
+              <span class="edu-school">Beijing University of Posts and Telecommunications · B.S.</span>
+              <span class="edu-time">Sep 2022 – Jun 2026</span>
+            </div>
+            <p class="edu-major">School of Information and Communication Engineering<br/>Electronic Information Engineering</p>
+            <div class="edu-tags">
               <span>Visiting Scholar: University of Cambridge, UK (Jul 2024 – Aug 2024)</span>
-            </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="publications" class="section">
+  <section id="publications" class="section section-alt">
     <div class="section-inner">
-      <h2 class="section-title">Publications</h2>
+      <h2 class="section-title"><span class="dot"></span>Selected Publications</h2>
       <div class="pub-list">
-        <div class="pub-item">
-          <div class="pub-header">
-            <div class="pub-venue">CVPR 2026 · Second Author</div>
+        <div class="pub-row">
+          <div class="pub-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
           </div>
-          <div class="pub-title">Quantum-Gated Task-interaction Knowledge Distillation for Pre-trained Model-based Class-Incremental Learning</div>
-          <p class="pub-abstract">We propose a Quantum-Gated Task-interaction Knowledge Distillation framework that parameterizes quantum circuits to embed samples and task representations into high-dimensional Hilbert space. This enables explicit measurement of sample-task geometric correlation through quantum state fidelity. Our method achieves SOTA performance on ImageNet-A (2.92% improvement over baselines), demonstrating the expressive power of quantum mechanisms under low-parameter increments.</p>
-          <div class="pub-tags">
-            <span>Continual Learning</span>
-            <span>Quantum Computing</span>
-            <span>Knowledge Distillation</span>
+          <div class="pub-body">
+            <div class="pub-meta">CVPR 2026 · Second Author</div>
+            <h3 class="pub-title">Quantum-Gated Task-interaction Knowledge Distillation for Pre-trained Model-based Class-Incremental Learning</h3>
+            <p class="pub-abstract">We propose a Quantum-Gated Task-interaction Knowledge Distillation framework that parameterizes quantum circuits to embed samples and task representations into high-dimensional Hilbert space. This enables explicit measurement of sample-task geometric correlation through quantum state fidelity. Our method achieves SOTA performance on ImageNet-A (2.92% improvement over baselines).</p>
+            <div class="pub-tags">
+              <span>Continual Learning</span>
+              <span>Quantum Computing</span>
+              <span>Knowledge Distillation</span>
+            </div>
           </div>
+          <a href="publications.html" class="pub-arrow" aria-label="View details">
+            <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+          </a>
         </div>
-        <div class="pub-item">
-          <div class="pub-header">
-            <div class="pub-venue">ICASSP 2026 · Second Author</div>
+        <div class="pub-row">
+          <div class="pub-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
           </div>
-          <div class="pub-title">LDE Prompt: Layer-importance guided Dual Expandable Prompt Pool for Pre-trained Model-based Class-Incremental Learning</div>
-          <p class="pub-abstract">We propose a layer-importance guided dual expandable prompt pool framework that quantifies task representation capabilities via mutual information gain, adaptively selecting key layers for prompt injection. Our dual-pool architecture (Global Pool + Training Pool) enables dynamic prompt expansion and historical knowledge protection. Achieves SOTA on CIFAR-100, CUB-200, and VTAB with average accuracy improvements of 0.50%–3.23%.</p>
-          <div class="pub-tags">
-            <span>Continual Learning</span>
-            <span>Prompt Tuning</span>
-            <span>Vision-Language</span>
+          <div class="pub-body">
+            <div class="pub-meta">ICASSP 2026 · Second Author</div>
+            <h3 class="pub-title">LDE Prompt: Layer-importance guided Dual Expandable Prompt Pool for Pre-trained Model-based Class-Incremental Learning</h3>
+            <p class="pub-abstract">We propose a layer-importance guided dual expandable prompt pool framework that quantifies task representation capabilities via mutual information gain, adaptively selecting key layers for prompt injection. Our dual-pool architecture (Global Pool + Training Pool) enables dynamic prompt expansion and historical knowledge protection. Achieves SOTA on CIFAR-100, CUB-200, and VTAB with average accuracy improvements of 0.50%–3.23%.</p>
+            <div class="pub-tags">
+              <span>Continual Learning</span>
+              <span>Prompt Tuning</span>
+              <span>Vision-Language</span>
+            </div>
           </div>
-        </div>
-        <div class="pub-item">
-          <div class="pub-header">
-            <div class="pub-venue">Patent · Lead Developer</div>
-          </div>
-          <div class="pub-title">A Motor-Imagery-based Rehabilitation Assessment Method, System, and Storage Medium — CN120954692A</div>
-          <p class="pub-abstract">Addressing the challenge of insufficient mapping between EEG signals and clinical semantics, I led the development of an end-to-end motor-imagery rehabilitation assessment system. The system combines optimal transport theory for precise EEG-text cross-modal alignment, model knowledge distillation for MoE decoder architecture, and agent-driven automated generation of structured and personalized diagnostic reports and charts.</p>
-          <div class="pub-tags">
-            <span>EEG</span>
-            <span>Cross-modal</span>
-            <span>MoE</span>
-            <span>Agent</span>
-          </div>
+          <a href="publications.html" class="pub-arrow" aria-label="View details">
+            <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="work" class="section section-alt">
+  <section id="work" class="section">
     <div class="section-inner">
-      <h2 class="section-title">Work Experience</h2>
+      <h2 class="section-title"><span class="dot"></span>Work Experience</h2>
       <div class="work-list">
-        <div class="work-item">
-          <div class="work-header">
-            <div class="work-company">Siasun Robot & Automation Co., Ltd.</div>
-            <div class="work-time">Dec 2025 – Jun 2026</div>
+        <div class="work-row">
+          <div class="work-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
           </div>
-          <div class="work-role">LLM Algorithm Intern</div>
-          <ul class="work-details">
-            <li>Designed and implemented real-time voice dialogue agent workflows for human-robot interaction scenarios.</li>
-            <li>Built end-to-end voice agent solutions using Qwen3, OpenAI-Whisper, and QwenCosyVoice, achieving sub-3-second response time on Nvidia Thor.</li>
-            <li>Developed Fun-Audio-Chat-8B based end-to-end dialogue optimization via SFT alignment and DPO, reducing first-token latency to 2s with KV-Cache optimization and Continuous Batching.</li>
-          </ul>
+          <div class="work-body">
+            <div class="work-header">
+              <span class="work-company">Siasun Robot & Automation Co., Ltd.</span>
+              <span class="work-time">Dec 2025 – Jun 2026</span>
+            </div>
+            <span class="work-role">LLM Algorithm Intern</span>
+            <ul class="work-details">
+              <li>Designed and implemented real-time voice dialogue agent workflows for human-robot interaction scenarios.</li>
+              <li>Built end-to-end voice agent solutions using Qwen3, OpenAI-Whisper, and QwenCosyVoice, achieving sub-3-second response time on Nvidia Thor.</li>
+              <li>Developed Fun-Audio-Chat-8B based end-to-end dialogue optimization via SFT alignment and DPO, reducing first-token latency to 2s with KV-Cache optimization and Continuous Batching.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -169,7 +234,7 @@
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
       </a>
     </div>
-    <p>© <span id="year"></span> Xiao Huiyu · Built with HTML & ☕</p>
+    <p>© <span id="year"></span> Xiao Huiyu · All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
