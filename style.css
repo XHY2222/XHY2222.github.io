@@ -223,7 +223,7 @@ svg { fill: currentColor; }
 
 .hero-scroll {
   position: absolute;
-  bottom: 24px;
+  bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 22px;
@@ -237,7 +237,7 @@ svg { fill: currentColor; }
 
 /* ===== SECTIONS ===== */
 .section {
-  padding: 80px 32px;
+  padding: 60px 32px;
 }
 .section-alt { background: var(--bg-alt); }
 
@@ -274,9 +274,9 @@ svg { fill: currentColor; }
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 .edu-logo {
-  width: 48px; height: 48px;
+  width: 56px; height: 56px;
   flex-shrink: 0;
-  border-radius: 50%;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg);
@@ -284,13 +284,14 @@ svg { fill: currentColor; }
 .edu-logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 2px;
 }
 .edu-body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 .edu-header {
   display: flex;
@@ -300,21 +301,17 @@ svg { fill: currentColor; }
   gap: 6px;
 }
 .edu-school {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--fg);
 }
 .edu-time {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--fg-muted);
   font-variant-numeric: tabular-nums;
 }
-.edu-degree {
-  font-size: 14px;
-  color: var(--fg);
-}
-.edu-location {
-  font-size: 13px;
+.edu-meta {
+  font-size: 15px;
   color: var(--fg-muted);
 }
 
