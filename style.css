@@ -250,19 +250,11 @@ svg { fill: currentColor; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--fg-muted);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: var(--fg);
   margin-bottom: 36px;
-}
-.dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  display: inline-block;
-  flex-shrink: 0;
 }
 
 /* ===== EDUCATION ===== */
@@ -281,24 +273,35 @@ svg { fill: currentColor; }
   align-items: flex-start;
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
-.edu-icon {
-  width: 36px; height: 36px;
+.edu-logo {
+  width: 48px; height: 48px;
   flex-shrink: 0;
-  color: var(--accent);
-  margin-top: 2px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg);
 }
-.edu-body { flex: 1; }
+.edu-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.edu-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 .edu-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 6px;
   flex-wrap: wrap;
   gap: 6px;
 }
 .edu-school {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--fg);
 }
 .edu-time {
@@ -306,23 +309,13 @@ svg { fill: currentColor; }
   color: var(--fg-muted);
   font-variant-numeric: tabular-nums;
 }
-.edu-major {
+.edu-degree {
+  font-size: 14px;
+  color: var(--fg);
+}
+.edu-location {
   font-size: 13px;
   color: var(--fg-muted);
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-.edu-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.edu-tags span {
-  font-size: 11px;
-  color: var(--accent);
-  background: var(--accent-soft);
-  padding: 4px 10px;
-  border-radius: 999px;
 }
 
 /* ===== PUBLICATIONS ===== */
