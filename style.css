@@ -103,53 +103,32 @@ svg { fill: currentColor; }
 
 .hero-left { padding-top: 20px; }
 
-.hero-eyebrow {
-  font-size: 14px;
-  color: var(--fg-muted);
-  margin-bottom: 8px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.hero-line {
-  display: inline-block;
-  width: 24px;
-  height: 2px;
-  background: var(--accent);
-  border-radius: 1px;
-}
-
 .hero-name {
   font-size: clamp(40px, 5vw, 64px);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -.02em;
-  margin-bottom: 20px;
   color: var(--fg);
 }
 
-.hero-desc {
+.hero-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 16px 0 20px;
+}
+
+.hero-bio {
+  margin-bottom: 28px;
+}
+.hero-bio p {
   font-size: 15px;
   color: var(--fg-muted);
   line-height: 1.7;
-  margin-bottom: 20px;
-  max-width: 440px;
+  margin-bottom: 14px;
 }
-
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 28px;
-}
-.hero-tags span {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--accent);
-  background: var(--accent-soft);
-  padding: 5px 14px;
-  border-radius: 999px;
-}
+.hero-bio p:last-child { margin-bottom: 0; }
 
 .hero-links {
   display: grid;
@@ -269,56 +248,6 @@ svg { fill: currentColor; }
   background: var(--accent);
   display: inline-block;
   flex-shrink: 0;
-}
-
-/* ===== ABOUT ===== */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 48px;
-  align-items: start;
-}
-.about-text p {
-  font-size: 15px;
-  color: var(--fg-muted);
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-.stats-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.stat-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 18px 20px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-}
-.stat-icon {
-  width: 28px; height: 28px;
-  flex-shrink: 0;
-  color: var(--accent);
-}
-.stat-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.stat-num {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--fg);
-  line-height: 1.2;
-}
-.stat-label {
-  font-size: 12px;
-  color: var(--fg-muted);
 }
 
 /* ===== EDUCATION ===== */
@@ -566,13 +495,13 @@ svg { fill: currentColor; }
     gap: 36px;
   }
   .hero-left { text-align: center; }
-  .hero-desc { margin-left: auto; margin-right: auto; }
+  .hero-divider { margin-left: auto; margin-right: auto; }
+  .hero-bio p { margin-left: auto; margin-right: auto; }
   .hero-links { margin: 0 auto; }
   .hero-right {
     max-width: 600px;
     margin: 0 auto;
   }
-  .about-grid { grid-template-columns: 1fr; }
   .pub-row { grid-template-columns: auto 1fr; }
   .pub-arrow { display: none; }
 }
