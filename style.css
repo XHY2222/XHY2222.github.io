@@ -309,8 +309,12 @@ svg { fill: currentColor; }
   color: var(--fg-muted);
   font-variant-numeric: tabular-nums;
 }
-.edu-meta {
+.edu-degree {
   font-size: 15px;
+  color: var(--fg);
+}
+.edu-location {
+  font-size: 14px;
   color: var(--fg-muted);
 }
 
