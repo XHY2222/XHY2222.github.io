@@ -196,6 +196,30 @@ svg { fill: currentColor; }
   width: 100%;
 }
 
+.hero-social {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  padding-top: 8px;
+}
+.hero-social a {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fg-muted);
+  transition: all .2s var(--ease);
+}
+.hero-social a svg { width: 18px; height: 18px; }
+.hero-social a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
 /* ===== SECTIONS ===== */
 .section {
   padding: 80px 32px;
