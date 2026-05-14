@@ -91,6 +91,7 @@ svg { fill: currentColor; }
 .hero {
   padding: 90px 32px 60px;
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+  position: relative;
 }
 
 .hero-inner {
@@ -220,6 +221,20 @@ svg { fill: currentColor; }
   transform: translateY(-2px);
 }
 
+.hero-scroll {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  animation: bounce 2.4s ease-in-out infinite;
+}
+.hero-scroll a {
+  color: var(--fg-muted);
+  transition: color .2s;
+}
+.hero-scroll a:hover { color: var(--accent); }
+
 /* ===== SECTIONS ===== */
 .section {
   padding: 80px 32px;
@@ -227,7 +242,7 @@ svg { fill: currentColor; }
 .section-alt { background: var(--bg-alt); }
 
 .section-inner {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -486,6 +501,12 @@ svg { fill: currentColor; }
 .footer p {
   color: var(--fg-muted);
   font-size: 12px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); opacity: .5; }
+  50%      { transform: translate(-50%, 8px); opacity: 1; }
 }
 
 /* ===== RESPONSIVE ===== */
