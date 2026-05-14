@@ -125,7 +125,7 @@ svg { fill: currentColor; }
   margin-bottom: 28px;
 }
 .hero-bio p {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--fg);
   line-height: 1.7;
   margin-bottom: 14px;
@@ -137,6 +137,10 @@ svg { fill: currentColor; }
   transition: opacity .2s;
 }
 .hero-bio a:hover { opacity: .7; }
+.hero-bio .school-name {
+  color: var(--accent);
+  font-weight: 600;
+}
 .hero-bio p:last-child { margin-bottom: 0; }
 
 
