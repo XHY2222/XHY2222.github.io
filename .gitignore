@@ -19,3 +19,6 @@ npm-debug.log*
 # Local agent notes (本机绝对路径，不上传)
 AGENTS.md
 .claude/
+cv.pdf
+CLAUDE.md
+QKD.pdf
