@@ -440,60 +440,69 @@ svg { fill: currentColor; }
   border-radius: 14px;
   padding: 24px 28px;
   display: flex;
-  gap: 18px;
-  align-items: flex-start;
+  gap: 22px;
+  align-items: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
-.work-icon {
-  width: 36px; height: 36px;
+.work-logo {
+  width: 90px; height: 90px;
   flex-shrink: 0;
-  color: var(--accent);
-  margin-top: 2px;
-}
-.work-body { flex: 1; }
-.work-header {
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg);
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 4px;
-  flex-wrap: wrap;
-  gap: 6px;
+  align-items: center;
+  justify-content: center;
 }
-.work-company {
-  font-size: 16px;
-  font-weight: 600;
+.work-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+.work-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.work-title {
+  font-size: 17px;
+  font-weight: 700;
   color: var(--fg);
+  line-height: 1.4;
 }
-.work-time {
-  font-size: 13px;
+.work-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
   color: var(--fg-muted);
-  font-variant-numeric: tabular-nums;
 }
-.work-role {
-  font-size: 13px;
+.work-location { color: var(--fg); font-weight: 500; }
+.work-sep { color: var(--fg-muted); }
+.work-time { font-variant-numeric: tabular-nums; }
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+.work-tags > span:not(.work-tag-sep) {
+  font-size: 12px;
   font-weight: 500;
-  color: var(--accent);
-  margin-bottom: 10px;
+  color: var(--fg);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  border-radius: 999px;
 }
-.work-details {
-  list-style: none;
-  padding-left: 0;
-}
-.work-details li {
-  font-size: 13px;
+.work-tag-sep {
   color: var(--fg-muted);
-  line-height: 1.7;
-  padding: 3px 0;
-  position: relative;
-  padding-left: 16px;
-}
-.work-details li::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 10px;
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
+  font-weight: 700;
+  padding: 0 2px;
 }
 
 /* ===== FOOTER ===== */
@@ -561,8 +570,7 @@ svg { fill: currentColor; }
   .edu-card,
   .work-row { padding: 18px 20px; }
   .pub-content { padding: 18px 20px 20px; }
-  .edu-header,
-  .work-header { flex-direction: column; gap: 2px; }
+  .edu-header { flex-direction: column; gap: 2px; }
 }
 
 @media (max-width: 520px) {
