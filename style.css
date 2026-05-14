@@ -30,6 +30,7 @@ svg { fill: currentColor; }
   -webkit-backdrop-filter: saturate(180%) blur(14px);
   background: rgba(255,255,255,.72);
   border-bottom: 1px solid var(--border);
+  transition: transform .35s var(--ease), background .3s var(--ease);
 }
 [data-theme="dark"] .nav { background: rgba(11,17,32,.72); }
 
@@ -182,43 +183,10 @@ svg { fill: currentColor; }
   display: block;
 }
 
-.hero-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.info-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 14px;
+.hero-right .hero-links {
   display: flex;
-  align-items: flex-start;
   gap: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-}
-.info-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-  color: var(--accent);
-  margin-top: 2px;
-}
-.info-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.info-label {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--fg);
-}
-.info-val {
-  font-size: 11px;
-  color: var(--fg-muted);
-  line-height: 1.5;
+  justify-content: center;
 }
 
 /* ===== SECTIONS ===== */
@@ -511,10 +479,6 @@ svg { fill: currentColor; }
   .nav { padding: 14px 20px; }
   .nav-links { gap: 16px; font-size: 13px; }
   .hero { padding: 80px 20px 40px; }
-  .hero-cards {
-    grid-template-columns: 1fr;
-  }
-  .info-card { flex-direction: row; }
   .section { padding: 60px 20px; }
   .edu-card,
   .pub-row,
@@ -527,5 +491,4 @@ svg { fill: currentColor; }
   .nav-links { display: none; }
   .hero-name { font-size: 36px; }
   .hero-links { grid-template-columns: repeat(2, 1fr); }
-  .hero-cards { grid-template-columns: 1fr; }
 }

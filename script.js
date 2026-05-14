@@ -26,12 +26,17 @@
 // 自动填年份
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// 滚动时显示/隐藏导航栏阴影
+// 滚动时隐藏/显示导航栏
 const nav = document.querySelector('.nav');
+let lastScrollY = 0;
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
-  if (y > 20) nav.style.boxShadow = '0 4px 20px -10px rgba(0,0,0,.08)';
-  else nav.style.boxShadow = 'none';
+  if (y > 60 && y > lastScrollY) {
+    nav.style.transform = 'translateY(-100%)';
+  } else {
+    nav.style.transform = 'translateY(0)';
+  }
+  lastScrollY = y;
 });
 
 // IntersectionObserver: 元素进入视口时淡入
