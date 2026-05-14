@@ -360,10 +360,14 @@ svg { fill: currentColor; }
 .pub-venue {
   font-size: 12px;
   font-weight: 600;
-  color: var(--accent);
-  background: var(--accent-soft);
+  color: #dc2626;
+  background: #fee2e2;
   padding: 4px 10px;
   border-radius: 6px;
+}
+[data-theme="dark"] .pub-venue {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.12);
 }
 .pub-status {
   font-size: 12px;
