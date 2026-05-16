@@ -563,6 +563,13 @@ svg { fill: currentColor; }
   color: var(--accent);
   font-weight: 700;
 }
+.pub-item-conclusion {
+  margin-top: 16px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.65;
+}
 
 /* ===== WORK EXPERIENCE ===== */
 .work-list {
