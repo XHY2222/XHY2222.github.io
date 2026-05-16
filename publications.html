@@ -62,11 +62,11 @@
           <div class="pub-item-innovation">
             <h4>Key Innovations</h4>
             <ul>
-              <li>Parameterize quantum circuits to embed samples and task representations into a high-dimensional Hilbert space, enabling explicit modeling of task interactions beyond Euclidean geometry.</li>
-              <li>Measure sample–task geometric correlation through quantum state fidelity, capturing relational dependencies among task embeddings that dynamically guide both training and inference across streaming tasks.</li>
-              <li>A low-parameter quantum gating mechanism delivers high expressive power, making the method well-suited for memory-constrained continual learning settings.</li>
+              <li><strong>Quantum-Gated Task Modulation (QGTM)</strong>: introduces parameterized quantum circuits into class-incremental learning for the first time, encoding sample features and task embeddings into Hilbert space via quantum superposition and interference, and dynamically quantifying sample-to-task relevance through fidelity measurement — breaking the expressiveness ceiling of classical similarity metrics.</li>
+              <li><strong>Correlation-guided Task-Interaction Knowledge Distillation (TIKD)</strong>: leverages the correlation coefficients from quantum gating as adaptive weights, selectively transferring knowledge from highly correlated historical adapters while suppressing interference from weakly correlated tasks, enabling precise inter-task knowledge transfer.</li>
+              <li><strong>Unified routing for training and inference</strong>: a single quantum-gating module simultaneously drives cross-task knowledge distillation during training and adaptive adapter fusion during inference, keeping training objectives consistent with inference behavior and resolving the routing challenge under task-agnostic evaluation.</li>
             </ul>
-            <p class="pub-item-conclusion">Achieves state-of-the-art on ImageNet-A with a 2.92% accuracy gain over the strongest prior baselines.</p>
+            <p class="pub-item-conclusion">The first quantum-computing-based routing framework for class-incremental learning — achieves state-of-the-art performance on five benchmarks under the exemplar-free setting, opening a new technical path for task-interaction modeling.</p>
           </div>
         </article>
 
@@ -98,11 +98,11 @@
           <div class="pub-item-innovation">
             <h4>Key Innovations</h4>
             <ul>
-              <li>Quantify each transformer layer's task-representation capability via mutual information gain, adaptively selecting key layers for prompt injection instead of relying on hand-tuned heuristics.</li>
-              <li>Dual expandable prompt pool architecture: a <strong>Global Pool</strong> preserves historical knowledge while a <strong>Training Pool</strong> absorbs new task signals, enabling dynamic capacity growth without overwriting prior tasks.</li>
-              <li>Effectively balances plasticity and stability, reducing catastrophic forgetting across long task sequences while maintaining strong forward transfer.</li>
+              <li><strong>Information-gain-driven adaptive layer selection</strong>: quantify each transformer layer's importance via mutual information (information gain); a forward pass before training each new task automatically picks the most informative layers for prompt injection, replacing the coarse strategies of hand-tuned presets or full-layer injection.</li>
+              <li><strong>Dual expandable prompt pool architecture</strong>: a frozen Global Pool stores all historical task knowledge while a Training Pool holds only the current task's trainable prompts — jointly resolving the conflict between overwriting old prompts and using a fixed-capacity pool.</li>
+              <li><strong>Dynamic pool expansion with cross-task sharing</strong>: similar prompts are retrieved from the Global Pool and expanded into the Training Pool during training, then archived back to the Global Pool afterward — growing pool capacity dynamically while similarity matching promotes prompt reuse across tasks and eliminates redundant learning.</li>
             </ul>
-            <p class="pub-item-conclusion">Sets new state-of-the-art on CIFAR-100, CUB-200, and VTAB with 0.50%–3.23% average accuracy improvements.</p>
+            <p class="pub-item-conclusion">The first prompt-pool framework integrating information-gain-driven adaptive layer selection with dynamic dual-pool expansion — comprehensively surpassing prior methods on three benchmarks.</p>
           </div>
         </article>
 
