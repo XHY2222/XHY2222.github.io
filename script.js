@@ -56,3 +56,39 @@ document.querySelectorAll('.edu-card, .pub-row, .work-row, .stat-card').forEach(
   el.style.transition = `opacity .5s ${i * 0.05}s cubic-bezier(.4,0,.2,1), transform .5s ${i * 0.05}s cubic-bezier(.4,0,.2,1)`;
   observer.observe(el);
 });
+
+// 图片灯箱：点击放大，再点一下关闭（Esc 也可）
+(() => {
+  let lightbox = null;
+  let prevOverflow = '';
+
+  const open = (src, alt) => {
+    if (!lightbox) {
+      lightbox = document.createElement('div');
+      lightbox.className = 'lightbox';
+      lightbox.innerHTML = '<img alt="" />';
+      lightbox.addEventListener('click', close);
+      document.body.appendChild(lightbox);
+    }
+    const img = lightbox.querySelector('img');
+    img.src = src;
+    img.alt = alt || '';
+    prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    requestAnimationFrame(() => lightbox.classList.add('open'));
+  };
+
+  const close = () => {
+    if (!lightbox) return;
+    lightbox.classList.remove('open');
+    document.body.style.overflow = prevOverflow;
+  };
+
+  document.querySelectorAll('.game-card-image img').forEach(img => {
+    img.addEventListener('click', () => open(img.src, img.alt));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+})();
