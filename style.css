@@ -388,6 +388,14 @@ svg { fill: currentColor; }
   color: #f87171;
   background: rgba(248, 113, 113, 0.12);
 }
+.pub-venue.prep {
+  color: #d97706;
+  background: #fef3c7;
+}
+[data-theme="dark"] .pub-venue.prep {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.12);
+}
 .pub-status {
   font-size: 12px;
   font-weight: 600;
