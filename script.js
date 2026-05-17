@@ -84,11 +84,31 @@ document.querySelectorAll('.edu-card, .pub-row, .work-row, .stat-card').forEach(
     document.body.style.overflow = prevOverflow;
   };
 
-  document.querySelectorAll('.game-card-image img').forEach(img => {
+  document.querySelectorAll('.game-card-image img, .recipe-card-image img').forEach(img => {
     img.addEventListener('click', () => open(img.src, img.alt));
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') close();
+  });
+})();
+
+// 菜谱搜索：根据 data-keywords 关键词过滤
+(() => {
+  const input = document.getElementById('recipe-search-input');
+  if (!input) return;
+  const cards = document.querySelectorAll('.recipe-card');
+  const empty = document.getElementById('recipe-empty');
+
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let visible = 0;
+    cards.forEach(card => {
+      const kw = (card.dataset.keywords || '').toLowerCase();
+      const match = !q || kw.includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    if (empty) empty.hidden = visible > 0;
   });
 })();
