@@ -586,6 +586,9 @@ svg { fill: currentColor; }
   color: var(--accent);
   line-height: 1.65;
 }
+.pub-item-innovation > .pub-item-conclusion:first-child {
+  margin-top: 0;
+}
 .pub-item-links {
   display: flex;
   flex-wrap: wrap;
