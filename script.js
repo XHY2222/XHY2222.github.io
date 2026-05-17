@@ -84,7 +84,7 @@ document.querySelectorAll('.edu-card, .pub-row, .work-row, .stat-card').forEach(
     document.body.style.overflow = prevOverflow;
   };
 
-  document.querySelectorAll('.game-card-image img, .recipe-card-image img').forEach(img => {
+  document.querySelectorAll('.game-card-image img, .recipe-card-image img, .photo-card-image img').forEach(img => {
     img.addEventListener('click', () => open(img.src, img.alt));
   });
 
