@@ -84,7 +84,7 @@ document.querySelectorAll('.edu-card, .pub-row, .work-row, .stat-card').forEach(
     document.body.style.overflow = prevOverflow;
   };
 
-  document.querySelectorAll('.game-card-image img, .recipe-card-image img, .photo-card-image img').forEach(img => {
+  document.querySelectorAll('.game-card-image img, .photo-card-image img').forEach(img => {
     img.addEventListener('click', () => open(img.src, img.alt));
   });
 
@@ -110,5 +110,47 @@ document.querySelectorAll('.edu-card, .pub-row, .work-row, .stat-card').forEach(
       if (match) visible++;
     });
     if (empty) empty.hidden = visible > 0;
+  });
+})();
+
+// 菜谱卡片：实物 ↔ 菜谱 横向滑动（默认显示实物，右滑/点击切换到菜谱）
+(() => {
+  const sliders = document.querySelectorAll('.recipe-card-image');
+  if (!sliders.length) return;
+
+  sliders.forEach(slider => {
+    if (slider.children.length < 2) {
+      slider.classList.add('ready');
+      return;
+    }
+
+    const showLast = () => {
+      slider.scrollLeft = slider.scrollWidth - slider.clientWidth;
+    };
+
+    // Default: scroll to the last panel (实物) before painting
+    showLast();
+    requestAnimationFrame(() => slider.classList.add('ready'));
+
+    // Click anywhere on the slider toggles between first (菜谱) and last (实物)
+    slider.addEventListener('click', () => {
+      const atLast = slider.scrollLeft > (slider.scrollWidth - slider.clientWidth) / 2;
+      slider.scrollTo({
+        left: atLast ? 0 : slider.scrollWidth - slider.clientWidth,
+        behavior: 'smooth'
+      });
+    });
+
+    // Hide the swipe hint once the user has navigated to 菜谱
+    slider.addEventListener('scroll', () => {
+      if (slider.scrollLeft < slider.scrollWidth - slider.clientWidth - 10) {
+        slider.classList.add('viewed');
+      }
+    }, { passive: true });
+
+    // Keep the right panel visible on resize
+    window.addEventListener('resize', () => {
+      if (!slider.classList.contains('viewed')) showLast();
+    });
   });
 })();
