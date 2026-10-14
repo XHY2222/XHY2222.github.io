@@ -658,6 +658,14 @@ svg { fill: currentColor; }
   object-fit: contain;
   padding: 4px;
 }
+.work-logo--wordmark {
+  width: 120px;
+  background: #fff;
+  padding: 8px;
+}
+@media (max-width: 720px) {
+  .work-logo--wordmark { width: 90px; padding: 0; }
+}
 .work-body {
   flex: 1;
   min-width: 0;
