@@ -643,7 +643,7 @@ svg { fill: currentColor; }
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 .work-logo {
-  width: 90px; height: 90px;
+  width: 120px; height: 90px;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -659,12 +659,12 @@ svg { fill: currentColor; }
   padding: 4px;
 }
 .work-logo--wordmark {
-  width: 120px;
   background: #fff;
   padding: 8px;
 }
 @media (max-width: 720px) {
-  .work-logo--wordmark { width: 90px; padding: 0; }
+  .work-logo { width: 90px; }
+  .work-logo--wordmark { padding: 0; }
 }
 .work-body {
   flex: 1;
