@@ -660,6 +660,7 @@ svg { fill: currentColor; }
 }
 .work-body {
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
