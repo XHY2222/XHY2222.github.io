@@ -712,6 +712,18 @@ svg { fill: currentColor; }
   padding: 0 2px;
 }
 
+/* ===== COMMUNITY SERVICE ===== */
+.service-entry {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 15px;
+  color: var(--fg);
+}
+.service-entry strong { color: var(--accent); }
+.service-entry span { min-width: 0; }
+
 /* ===== AWARDS ===== */
 .awards-list {
   list-style: none;
